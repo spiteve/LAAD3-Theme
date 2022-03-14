@@ -1,4 +1,4 @@
-# README
+# LAAD3
 
 This is a CSS style designed for LAAD3 (Longman Advanced American Dictionary), with both **dark** and **light** mode.
 
