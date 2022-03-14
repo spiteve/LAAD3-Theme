@@ -193,7 +193,7 @@ img[src*="img/spkr_r"], img[src*="img/spkr_b"] {
   border-radius: 4px;
   background-color: #32302f;
 }
-img[src*="img/spkr_r"]::after, img[src*="img/spkr_b"]::after {
+.entry .jp-play:last-of-type::after {
   content: "*";
   visibility: hidden;
   line-height: 1.5rem;
