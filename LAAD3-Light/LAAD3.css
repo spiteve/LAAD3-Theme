@@ -1,0 +1,1037 @@
+:root{
+  --bg0_h: #f9f5d7;
+  --bg0: #fbf1c7;
+  --bg0_s: #f2e5bc;
+  --bg1: #ebdbb2;
+  --bg2: #d5c4a1;
+  
+  --tx1: #3c3836;
+  --tx2: #504945;
+  --tx3: #665c54;
+  --tx4: #7c6f64;
+
+  --redl: #9d0006;
+  --greenl: #79740e;
+  --yellowl: #b57614;
+  --bluel: #076678;
+  --purplel: #8f3f71;
+  --aqual: #427b58;
+  --orangel: #af3a03;
+  --redd: #cc241d;
+  --greend: #98971a;
+}
+
+/*============================================================
+--global 
+============================================================*/
+body {
+  background-color: #f9f5d7;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-family: system-ui, helvetica, arial, sans-serif !important;
+  color: #3c3836;
+}
+i {
+    font-style: italic;
+}
+
+/*============================================================
+--word-jump
+============================================================*/
+.chwd {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  top: 2px;
+  padding-left: 13px;
+  padding-top: 5px;
+}
+.chwd a {
+  line-height: 1.4em;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 2px solid #f2e5bc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #665c54;
+}
+.chwd a:last-of-type {
+  border-right: none;
+}
+.chwd sup {
+  font-size: 10px;
+}
+
+/*============================================================
+--head
+============================================================*/
+.entryhead {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 10px 0px;
+  border: 2px solid #f2e5bc;
+  border-radius: 4px;
+  background-color: #fbf1c7;
+}
+
+/*--word--*/
+.hwd {
+  display: inline;
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: bold;
+  color: #9d0006;
+}
+
+/*--hyphenated word--*/
+.hyphenation, .hyphenation.frequent {
+  display: none;
+}
+
+/*--corner mark number--*/
+.entry .homnum {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: super;
+  position: relative;
+  top: -6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9d0006;
+}
+
+/*--------pronunciation--------*/
+.entryhead proncodes {
+  display: inline;
+  color: #3c3836;
+}
+.inflections proncodes {
+  margin-right: 0;
+}
+proncodes .pronstrong {
+  color: #665c54;
+}
+
+/*--tense--*/
+.pastpart, .pastpartx, .pasttense, .pasttense, .prespart, .prespartx, .t3perssing, .t3perssingx, .ptandpp, .ptandppx {
+  color: inherit;
+}
+
+/*--level dot--*/
+.level {
+  display: inline;
+  font-family: monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #504945;
+}
+
+/*--written & spoken frequency, academic written--*/
+freq, .freq, ac, .ac {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #d5c4a1;
+  border-radius: 4px;
+  padding: 0px 2px 0px 2px;
+  line-height: 1.4em;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f2e5bc;
+  color: #504945;
+}
+
+/*--------part of speech--------*/
+.pos {
+  display: inline;
+  font-weight: bold;
+  color: #427b58;
+}
+
+/*--------word inflection (also [word])--------*/
+.inflections {
+  display: inline;
+  color: #665c54;
+}
+/*--plural form--*/
+.pluralform {
+  font-weight: normal;
+}
+.pluralform .italic {
+  font-weight: normal;
+}
+/*--comparative--*/
+.comp {
+  font-weight: normal;
+}
+/*--superlative--*/
+.superl {
+  font-weight: normal;
+}
+.superl .infllab {
+  font-weight: normal;
+}
+/*--unclassified--*/
+.unclassified {
+  font-weight: normal;
+}
+
+/*--------audio button--------*/
+img[src*="img/spkr_"]{
+  max-height: 14px;
+}
+img[src*="img/spkr_g"]{
+  max-height: 12px;
+}
+img[src*="img/spkr_r"], img[src*="img/spkr_b"] {
+  margin-left: 5px;
+  padding: 3px 18px;
+  vertical-align: middle;
+  border: 1px solid #ebdbb2;
+  border-radius: 4px;
+  background-color: #f2e5bc;
+}
+img[src*="img/spkr_r"]::after, img[src*="img/spkr_b"]::after {
+  content: "*";
+  visibility: hidden;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+}
+img[src*="img/spkr_g"] {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 4px 0;
+  vertical-align: text-bottom;
+}
+
+/*============================================================
+--function button
+============================================================*/
+.entryhead .buttons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  line-height: 18px;
+}
+.popup-button {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 0px 5px 0px;
+  border-radius: 4px;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #f2e5bc;
+  color: #7c6f64;
+}
+
+/*==================================================================
+--pop menu
+==================================================================*/
+.popetymology, .popverbs, .popcolloheader, .popthesaurus {
+  display: block;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #f2e5bc;
+  border-radius: 4px;
+  line-height: 1em;
+  font-size: 18px;
+  font-weight: bold;
+  color: #076678;
+}
+
+/*--------etymology--------*/
+.popetymology, .popcolloheader {
+  padding: 10px;
+  border: 2px solid #f2e5bc;
+  background-color: #fbf1c7;
+}
+.popetymology ~ .etymology b {
+  display: inline-block;
+  margin-left: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #076678;
+}
+.popetymology ~ .hyphenation {
+  display: block;
+  padding-bottom: 10px;
+  margin-left: 12px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #fbf1c7;
+  font-weight: bold;
+  color: #665c54;
+}
+
+/*--------verbtable--------*/
+.popverbs {
+  padding-bottom: 10px;
+}
+.verbtable, .entry.lozenge{
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fbf1c7;
+}
+.verbtable .lemma {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #076678;
+}
+.verbtable table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.header {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.verbtable td {
+  padding: 5px 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d5c4a1;
+  font-size: 14px;
+}
+.verbtable td.col2 {
+  color: #665c54;
+}
+.verbtable .verb_form {
+  font-weight: bold;
+}
+
+/*--------collocate--------*/
+.popcolloheader ~ .collocate {
+  margin-top: 10px;
+  padding: 10px 10px 5px;
+  border: 1px solid #f2e5bc;
+  border-radius: 4px 4px 0 0;
+  background-color: #fbf1c7;
+}
+.popcolloheader ~ .collocate ~ .collocate {
+  margin-top: 0;
+  padding-top: 5px;
+  border-top: none;
+  border-radius: 0;
+}
+.popcolloheader ~ .collocate:last-of-type {
+  padding-bottom: 10px;
+  border-radius: 0 0 4px 4px;
+}
+.popcolloheader ~ .collocate .expandable {
+  display: block;
+  position: relative;
+  right: 4px;
+}
+.expandable .arrow {
+  display: none;
+  cursor: pointer;
+  color: #d5c4a1;
+}
+
+/*--------popthesaurus--------*/
+.popthesaurus {
+  padding-bottom: 10px;
+  margin: 0;
+  border-bottom: none;
+}
+
+/*============================================================
+--sense
+============================================================*/
+.sense {
+  display: block;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #f2e5bc;
+  background-color: #fbf1c7;
+  padding: 10px;
+}
+.subsense {
+  display: block;
+}
+.subsense ~ .subsense {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #f2e5bc;
+}
+
+/*--sense number--*/
+.sensenum {
+  display: inline-block;
+  padding: 0px 2px 0px 2px;
+  line-height: 1.2em;
+  border-radius: 4px;
+  border: 1px solid #d5c4a1;
+  font-size: 13px;
+  font-weight: bold;
+  color: #d5c4a1;
+}
+
+/*--topic--*/
+.topic .topic {
+  display: inline-block;
+  padding: 0px 2px 0px 2px;
+  line-height: 1.2em;
+  border: 1px solid #076678;
+  border-radius: 4px;
+  background-color: #f2e5bc;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  color: #076678;
+  opacity: .8;
+}
+.topic .neutral {
+  display: none;
+}
+.topic + .topic {
+  margin-left: 5px;
+}
+.sensenum + .topic > .topic {
+  margin-left: 5px;
+}
+
+/*--signpost word--*/
+.signpost {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0px 4px 0px 4px;
+  line-height: 1.2em;
+  border: 1px solid #b57614;
+  border-radius: 4px;
+  background-color: #f2e5bc;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  color: #b57614;
+  opacity: .9;
+}
+
+/*--------definition--------*/
+.def {
+  margin-left: 5px;
+  display: inline;
+  color: #3c3836;
+}
+.def::before {
+  content: "> ";
+  font-weight: bold;
+  color: #af3a03;
+}
+.defbold {
+  font-weight: bold;
+}
+/*--chinese definition--*/
+/* .def_c { display: inline; letter-spacing: -12px; visibility: hidden; font-size: 12px; color: transparent; transition: color .3s; } .def_c::before { content: "ZH"; display: inline-block; visibility: visible; padding: 0px 2px 0px 2px; margin-left: 5px; margin-left: 5px; line-height: 14px; letter-spacing: 0; font-weight: bold; border-radius: 4px; border: 1px solid #d5c4a1; color: #d5c4a1; } .def_c:hover { margin-left: 5px; visibility: visible; cursor: pointer; letter-spacing: 0; color: #665c54; } */
+
+/*--corner mark number--*/
+.homnum, .refhomnum, .refsensenum, .etymrefhom, sup {
+  margin-left: 1px;
+  vertical-align: super;
+  font-size: 10px;
+  line-height: 0;
+}
+.refhomnum + .refsensenum {
+  margin-left: 0;
+}
+
+/*--grammer, e.g., [transitive]--*/
+.gram {
+  display: inline;
+  color: #427b58;
+}
+
+/*--------variant--------*/
+.variant {
+  margin-left: 5px;
+  color: #665c54;
+}
+.amevariant .neutral {
+  position: relative;
+  right: 5px;
+  color: #076678;
+}
+/*--e.g. do, (doh)*/
+.orthvar {
+  margin-left: 5px;
+}
+/*--lexvar(variant verb), e.g., (also ~)--*/
+.lexvar {
+  margin-left: 5px;
+}
+.variant .neutral + .linkword + .lexvar {
+  margin-left: 0;
+}
+
+/*--inflection--*/
+.variant .linkword, .inflections .linkword, .infllab {
+  color: #076678;
+  font-weight: normal;
+}
+
+/*--------related word--------*/
+.relatedwd {
+  display: inline;
+  color: #665c54;
+}
+.relatedwd::before {
+  content: "⤑ ";
+  margin-left: 5px;
+  opacity: .5;
+}
+.relatedwd .neutral {
+  display: none;
+}
+.sense .relatedwd:last-of-type {
+  border-top: 1px solid #f2e5bc;
+  display: block;
+  margin-top: 5px;
+  color: #665c54;
+}
+.sense .relatedwd:last-of-type::before {
+  margin-left: 0;
+}
+/*--reference word--*/
+.refhwd {
+  color: #427b58;
+  opacity: .8;
+}
+.nondv .refhwd {
+  color: inherit;
+  opacity: unset;
+  /* font-style: italic; */
+}
+/* .nondv .refhwd + .suffix {
+  font-style: italic;
+} */
+.refhwd ~ .refhomnum, .refhwd ~ .refsensenum {
+  color: #427b58;
+  opacity: .8;
+} 
+
+/*--------reference lex--------*/
+.reflex {
+  color: #79740e;
+  opacity: .8;
+}
+.reflex ~ a .refhwd {
+  text-decoration: none;
+}
+.reflex ~ a .refhwd .neutral {
+  display: none;
+}
+.reflex ~ a .refhwd:first-of-type::before {
+  visibility: visible;
+  content: "- ";
+}
+.reflex ~ a .neutral {
+  color: #427b58;
+  opacity: .8;
+}
+
+/*--------synonym opposite--------*/
+.syn, .opp {
+  display: inline;
+  margin-left: 5px;
+}
+.syn + .syn, .opp + .opp {
+  margin-left: 0;
+}
+.synopp {
+  display: inline-block;
+  margin-right: 1px;
+  padding: 0px 2px 0px 2px;
+  border-radius: 4px;
+  border: 1px solid #427b58;
+  line-height: 1.2em;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: #f2e5bc;
+  color: #427b58;
+  opacity: .9;
+}
+
+/*--------first of type--------*/
+.def:first-of-type, .signpost:first-of-type, .gram:first-of-type, .sense > .lexunit:first-of-type, .sense > .synopp:first-of-type {
+  margin-left: 0;
+}
+
+/*======================end of sense======================*/
+/*--------grammar--------*/
+.grammar {
+  display: block;
+  margin-top: 5px;
+}
+
+/*--------reigister accent--------*/
+.registerlab {
+  display: inline;
+  color: #8f3f71;
+}
+.geo {
+  display: inline;
+  margin-left: 5px;
+  color: #076678;
+}
+.sensenum + .registerlab, .sensenum + .geo, .sensenum + .gram {
+  margin-left: 5px;
+}
+/* .variant .geo, .collo .geo, .propform .geo, 
+.variant .registerlab, .collo .registerlab,.propform .registerlab,
+.amevariant .geo, .amevariant .registerlab, .inflections .geo, .inflections .registerlab {
+  margin-right: 0;
+} */
+/* .collo .geo, .propformprep .gek, .propform .geo, .synopp + .geo, proncodes + .geo, .inflections .geo, .inflections .registerlab, .collo .registerlab, .propformprep .registerlab, .propform .registerlab, .synopp + .registerlab, proncodes + .registerlab, .variant .lexvar + .geo, .variant .lexvar + .registerlab, .linkword + .geo, .linkword + .registerlab{
+  margin-left: 5px;
+}  */
+/* .geo + .linkword, .registerlab + .linkword {
+  display: inline-block;
+} */
+
+/*--------phrase--------*/
+.lexunit {
+  display: inline;
+  margin-left: 5px;
+  color: #b57614;
+}
+
+/*--------collocation--------*/
+.colloc, .collo, .propformprep, .propform, .thespropform {
+  display: inline;
+  color: #79740e;
+}
+.colloc.key {
+  font-weight: bold;
+}
+span.keycollo {
+  font-weight: bold;
+}
+.colloc + .gloss, .collo + .gloss, .propformprep + .gloss, .propform + .gloss, .thespropform + .gloss {
+  color: #665c54;
+}
+.thespropform + .neutral, .thespropform .neutral {
+  display: none;
+}
+
+/*--collocation gloss--*/
+.collgloss {
+  /* color: inherit; */
+  color: #665c54;
+}
+.example .collgloss {
+  color: inherit;
+}
+
+/*--------image--------*/
+.imgholder { display: none; vertical-align: text-top; } .imgholder img { max-width: 30px; margin-left: 5px; border-radius: 4px; opacity: 50%; } .imgholder img:hover { cursor: pointer; opacity: 100%; } .imgholder img:active { max-width: max-content; opacity: 100%; }
+
+/*======================other======================*/
+/*--fullform--*/
+.fullform {
+  font-weight: bold;
+}
+
+/*--amequiv brequiv--*/
+.amequiv, .brequiv {
+  color: inherit;
+}
+
+/*--neutral--*/
+.def + .neutral, .def_c + .neutral, .variant + .neutral, .relatedwd + .neutral, .amequiv + .neutral, .brequiv + .neutral, .syn + .neutral, .opp + .neutral {
+  display: none;
+}
+/*==================================================================
+--phrase verb
+==================================================================*/
+.phrvbentry {
+  display: block;
+  margin-top: 20px;
+}
+.phrvbentry .entryhead {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #fbf1c7;
+  color: #b57614;
+}
+.phrvbentry .entryhead .phrvbhwd {
+  font-weight: bold;
+}
+.phrvbentry .entryhead .phrvbhwd object{
+  color: #665c54;
+}
+.phrvbentry .sense{
+  border-radius: 4px 4px 0 0;
+}
+.phrvbentry .sense:last-of-type {
+  border-radius: 0 0 4px 4px;
+}
+.phrvbentry .sense ~ .sense {
+  margin-top: 0;
+  border-top: none;
+  border-radius: 0;
+}
+.phrvbentry .spokensect .sense {
+  border-bottom-color: #f2e5bc;
+}
+.phrvbentry .spokensect .sense:last-of-type {
+  border-bottom-color: #ebdbb2;
+}
+
+/*==================================================================
+--example
+==================================================================*/
+.example {
+  display: block;
+  /* padding: 0px 15px 0px 0px; */
+  color: #7c6f64;
+}
+/* .example_c { display: block; padding-right: 5px; visibility: hidden; line-height: 0; font-size: 12px; color:  transparent; transition: color .3s; } .example_c::before{ display: block; float: right; visibility: visible; position: relative; bottom: 11px; left: 15px; padding-right: 0; content: "⊙"; letter-spacing: 10px; line-height: 0; font-weight: 900; color: #d5c4a1; } .example_c:hover{ visibility: visible; padding-left: 22px; line-height: 1.6em; color: #7c6f64; cursor: pointer; } */
+.colloinexa {
+  text-decoration: underline solid;
+  text-decoration-color: #7c6f64;
+}
+.gloss {
+  display: inline;
+  color: inherit;
+}
+
+/*==================================================================
+--box
+==================================================================*/
+.grambox, .collobox, .thesbox, .f2nbox, .usagebox {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: 2px solid #f2e5bc;
+  border-radius: 4px;
+  background-color: #fbf1c7;
+  color: #3c3836;
+}
+
+.sense > .grambox, .sense > .collobox, .sense > .thesbox, .sense > .f2nbox, .sense > .usagebox {
+  border-color: #ebdbb2;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/*--------spoken section--------*/
+.spokensect {
+  display: block;
+  margin-top: 20px;
+  color: #3c3836;
+}
+.spokensect .spokensecthead {
+  display: block;
+  padding: 5px 10px 7px;
+  border: 2px solid #ebdbb2;
+  border-radius: 4px;
+  background-color: #fbf1c7;
+}
+.spokensect .sense {
+  border-color: #ebdbb2;
+}
+
+/*--------box and section heading--------*/
+.heading, .spokensecthead {
+  display: block;
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: bold;
+  color: #076678;
+}
+.heading {
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #f2e5bc;
+}
+/* .heading .heading::before, .spokensecthead::before {
+  content: "❖";
+  margin-left: 5px;
+  border-radius: 4px;
+} */
+.heading .heading {
+  border: none;
+}
+.secheading {
+  display: block;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.subheading {
+  display: block;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #f2e5bc;
+  font-weight: bold;
+  color: #076678;
+}
+
+/*--------section and exponent--------*/
+.section, .exponent {
+  display: block;
+}
+.section ~ .section, .exponent ~ .exponent {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #f2e5bc;
+}
+.section .secheading {
+  color: #076678;
+}
+.exp {
+  color: #b57614;
+}
+.exp ~ .def {
+  margin-left: 0;
+}
+.exp ~ .def::before {
+  display: none;
+}
+.compareword {
+    color: inherit;
+}
+
+/*--------explation and collocation--------*/
+.expl, .collocate, .exponent {
+  display: block;
+}
+.expl + .heading  {
+  margin-top: 10px;
+}
+.expl ~ .expl {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #f2e5bc;
+}
+/* .expl .example .neutral, .collocate .example .neutral, .exponent .example .neutral {
+  display: none;
+} */
+
+/*--expression, e.g., verb, adjective--*/
+.expr {
+  display: inline;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* .expl .example::before, .collocate .example::before, .exponent .example::before { content: "• "; margin-left: 10px; } */
+
+/*--Grammar guide--*/
+.grambox .gramrefcont {
+  display: block;
+  margin-top: 5px;
+  color: #665c54;
+}
+
+/*--------bad and good example--------*/
+.badexa, .goodexa {
+  display: inline;
+  margin-left: 5px;
+}
+badcollo, .badexa {
+  text-decoration: line-through;
+  color: #665c54;
+}
+goodcollo, .goodexa {
+  color: #98971a;
+}
+.badexa + .neutral, .goodexa + .neutral {
+  position: relative;
+  right: 2px;
+  color: #665c54;
+}
+.expr + .badexa::before, .goodexa + .badexa {
+  display: block;
+  content: "*";
+  visibility: hidden;
+}
+.cross {
+  display: inline;
+  font-weight: bold;
+  color: #cc241d;
+}
+.expr + .cross {
+  margin-left: 5px;
+}
+
+/*--------hint & warning--------*/
+.hint {
+  display: block;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #665c54;
+}
+.warning {
+  margin-left: 5px;
+  color: #cc241d;
+}
+.hintbold {
+  font-weight: bold;
+}
+.hintitalic {
+  font-style: italic;
+}
+hinttitle {
+  color: #076678;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+/*==================================================================
+--tail
+==================================================================*/
+.thesref, .crossref {
+  border-top: 1px solid #f2e5bc;
+  margin-top: 5px;
+  color: #665c54;
+}
+.thesref {
+  display: inline-block;
+}
+.crossref {
+  display: block;
+}
+.thesref .thesaurus {
+  display: none;
+}
+.thesref .thesaurus + .thesaurus {
+  display: inline;
+}
+.thesref.newline {
+  display: block;
+}
+.thesref br {
+  display: none;
+}
+.crossref + .crossref, .crossref .thesref, .thesref + .crossref {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+crossrefto .reflex {
+  color: inherit;
+}
+.thesref:link, .cross:link {
+  color: #665c54;
+}
+.tail .crossref + .crossref, .tail .thesref +.thesref, .tail .crossref .thesref, .tail .thesref + .crossref {
+  padding-top: 0;
+}
+.tail > .relatedwd {
+  display: block;
+  margin-top: 5px;
+  border-top: 1px solid #f2e5bc;
+}
+
+/*--------arrow icon--------*/
+.thesref::before, .crossref::before {
+  content: "⤑";
+}
+.thesref ~ .thesref::before {
+  display: none;
+}
+
+/*--------other--------*/
+.crossref > .neutral {
+  display: none;
+}
+.crossref .neutral ~ .neutral {
+  margin-right: 0;
+}
+.crossref .neutral {
+  color: #076678;
+}
+
+.runon {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 0 7px;
+  border: 1px solid #f2e5bc;
+  border-radius: 4px 4px 0 0;
+  background-color: #fbf1c7;
+}
+.runon ~ .runon {
+  margin-top: 0;
+  border-top: none;
+  border-radius: 0;
+}
+.runon:last-of-type {
+  border-radius: 0 0 4px 4px;
+}
+.runon .example_c {
+  padding-right: 15px;
+}
+.runon .pos {
+  opacity: .9;
+}
+
+/*--another vocabulary at the tail--*/
+.deriv {
+  display: inline;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #9d0006;
+  opacity: .9;
+}
+.deriv span:first-of-type {
+  margin-right: 5px;
+  color: #665c54;
+  opacity: .5;
+}
+
+/*--start at new line--*/
+.colloexa::before, .gramexa::before, .cross .cross::before {
+  content: "*";
+  display: block;
+  visibility: hidden;
+  line-height: 0;
+}
+
+/*--------e.g., [origin:~]--------*/
+.etymbox {
+  display: none;
+  margin-top: 5px;
+  margin-left: 22px;
+  color: #665c54;
+}
+.etymlang {
+  color: #8f3f71;
+}
+etymsense {
+  display: block;
+}
+.etymtran {
+  font-weight: bold;
+}
+.etymtran::before {
+  margin-left: 5px;
+  content: "⤑";
+  opacity: .5;
+}
+
+/*==================================================================
+--other
+==================================================================*/
+
+.abbr {
+  color: inherit;
+}
+
+errorbox {
+  display: block;
+}
+
+note {
+  display: block;
+}
+
+learneritem {
+  display: block;
+}
