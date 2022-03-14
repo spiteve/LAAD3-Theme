@@ -15,4 +15,4 @@ Simply place the `img` folder and `css` file into the root of dictionary (usuall
 
 ---
 
-*Note this code is for learning purposes only.*
+This code is for learning purposes only.
