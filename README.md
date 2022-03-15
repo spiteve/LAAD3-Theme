@@ -22,7 +22,7 @@ The colour scheme is inspired by [Gruvbox colour palette](https://github.com/mor
 
 ## Deployment
 
-Directly move the `img` folder and `css` file into the root of dictionary file (usually the same level as the `mdx` file).
+Open the downloaded folder and directly copy both the `img` folder and `css` file into the root of dictionary file (usually the same level as the `mdx` file).
 
 - If the style has not changed, try clearing the cache of dictionary software and restarting it. 
 - Please do not change the file name, this will invalidate the configuration.
