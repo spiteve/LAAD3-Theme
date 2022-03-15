@@ -1,6 +1,6 @@
 # LAAD3-CSS
 
-The CSS style designed for LAAD3 (Longman Advanced American Dictionary), with both **dark** and **light** mode.
+These are the themes designed for LAAD3 (Longman Advanced American Dictionary), provide both **dark** and **light** mode.
 
 The colour scheme is inspired by [Gruvbox colour palette](https://github.com/morhetz/gruvbox.git).
 
