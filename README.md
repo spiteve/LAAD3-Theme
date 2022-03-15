@@ -10,7 +10,8 @@ The colour scheme is inspired by [Gruvbox colour palette](https://github.com/mor
 
 **Drak Mode**
 
-![Drak mode](Drakmode.png)
+<img src="https://raw.githubusercontent.com/spiteve/LAAD3-CSS/main/README/Darkmode.png" width="400px" />
+
 <br/>
 
 **Light Mode**
