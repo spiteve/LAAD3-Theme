@@ -6,15 +6,19 @@ The colour scheme is inspired by [Gruvbox colour palette](https://github.com/mor
 
 ## Interface
 
-Drak Mode
+**Drak Mode**
 
-<img src="https://raw.githubusercontent.com/spiteve/LAAD3-CSS/main/README/Darkmode.png)" width="100px" />
+<img src="https://raw.githubusercontent.com/spiteve/LAAD3-CSS/main/README/Darkmode.png" width="500px" />
+
+**Light Mode**
+
+<img src="https://raw.githubusercontent.com/spiteve/LAAD3-CSS/main/README/Lightmode.png" width="500px" />
 
 ---
 
 ## Deployment
 
-Directly place the `img` folder and `css` file into the root of dictionary (usually the same level as the `mdx` file).
+Directly move the `img` folder and `css` file into the root of dictionary file (usually the same level as the `mdx` file).
 
 - If the style has not changed, try clearing the cache of dictionary software and restarting it. 
 - Please do not change the file name, this will invalidate the configuration.
