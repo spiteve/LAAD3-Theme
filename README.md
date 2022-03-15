@@ -8,10 +8,10 @@ The colour scheme is inspired by [Gruvbox colour palette](https://github.com/mor
 
 # Deployment
 
-Simply place the `img` folder and `css` file into the root of dictionary (usually the same level as the `mdx` file).
+Directly place the `img` folder and `css` file into the root of dictionary (usually the same level as the `mdx` file).
 
 - If the style has not changed, try clearing the cache of dictionary software and restarting it. 
-- Please do not change the file name, this will also invalidate the configuration.
+- Please do not change the file name, this will invalidate the configuration.
 
 ---
 
