@@ -4,9 +4,15 @@ This is a CSS style designed for LAAD3 (Longman Advanced American Dictionary), w
 
 The colour scheme is inspired by [Gruvbox colour palette](https://github.com/morhetz/gruvbox.git).
 
+## Interface
+
+Drak Mode
+
+<img src="https://raw.githubusercontent.com/spiteve/LAAD3-CSS/main/README/Darkmode.png)" width="100px" />
+
 ---
 
-# Deployment
+## Deployment
 
 Directly place the `img` folder and `css` file into the root of dictionary (usually the same level as the `mdx` file).
 
