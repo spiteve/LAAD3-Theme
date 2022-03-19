@@ -1,4 +1,4 @@
-# LAAD3-CSS
+# LAAD3-Theme
 
 LAAD3-CSS are the themes designed for LAAD3 (Longman Advanced American Dictionary), provide both **dark** and **light** mode.
 
